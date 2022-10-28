@@ -1,7 +1,11 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-#
+
+# Personal
+/Assets/_[Ss]andbox/
+/Assets/_[Ss]andbox.meta
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
