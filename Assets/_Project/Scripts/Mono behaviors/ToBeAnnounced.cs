@@ -11,5 +11,10 @@ public class ToBeAnnounced : MonoBehaviour
         ((RectTransform)instance.transform).anchoredPosition = RandomizePosition();
     }
 
-    private Vector2 RandomizePosition() => new(Random.Range(-(1920 * .5f), (1920 * .5f)), Random.Range(-(1080f * .5f), (1080f * .5f)));
+    private Vector2 RandomizePosition()
+    {
+        var halfWidth = Screen.width * .5f;
+        var halfHeight = Screen.height * .5f;
+        return new Vector2(Random.Range(-halfWidth, halfWidth), Random.Range(-halfHeight, halfHeight));
+    }
 }

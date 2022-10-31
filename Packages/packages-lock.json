@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.nefisto.ntools": {
+      "version": "https://github.com/Nefisto/NTools.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "35c77f5a81ff8ad6a25ddb36e97e25e73994276a"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.8",
       "depth": 1,
