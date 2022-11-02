@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float speed = 5f;
 
+    [Title("Debug")]
+    [ReadOnly]
+    [SerializeField]
     private Vector2 currentDirection;
     
     public void Start()
