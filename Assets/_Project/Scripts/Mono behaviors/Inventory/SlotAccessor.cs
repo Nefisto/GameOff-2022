@@ -18,18 +18,20 @@ public class Slot
 
     [HideInInspector]
     public Inventory owner;
-    
+
     public void AddItem (Item item, int amount = 1)
     {
         if (this.item == item)
+        {
             this.amount += amount;
+        }
         else
         {
             this.item = item;
             this.amount = amount;
         }
     }
-    
+
     public Slot ChangeSlots (Slot otherSlot)
     {
         if (HasSameItemThat(otherSlot))
@@ -45,14 +47,14 @@ public class Slot
         return tempSlot;
     }
 
+
     private void ShallowCopy (Slot other)
     {
         index = other.index;
         item = other.item;
         amount = other.amount;
-        owner = other.owner;
     }
-    
+
     private void IncrementAmountIn (int many)
         => amount += many;
 
@@ -60,13 +62,13 @@ public class Slot
         => item == otherSlot.item;
 }
 
-public class SlotAccessor : MonoBehaviour
+public class SlotAccessor : MonoBehaviour, IClickable
 {
     [Title("Set by inventory")]
     [HideReferenceObjectPicker]
     [HideLabel]
     [SerializeField]
-    private Slot slot;
+    public Slot slot;
 
     [Title("References")]
     [SerializeField]
@@ -77,7 +79,18 @@ public class SlotAccessor : MonoBehaviour
 
     [SerializeField]
     private Image amountLabelBackground;
-    
+
+    public bool IsEmpty => slot.item == null;
+
+    private void OnValidate()
+        => UpdateHUD();
+
+    public void OnPress (ClickableContext context)
+        => Debug.Log($"{gameObject.name} PRESSED");
+
+    public void OnRelease (ClickableContext context)
+        => Debug.Log($"{gameObject.name} RELEASED");
+
     public void Setup (Inventory owner, int index, Item initialItem = null, int itemAmount = 0)
     {
         slot.owner = owner;
@@ -87,31 +100,52 @@ public class SlotAccessor : MonoBehaviour
             slot.item = initialItem;
             slot.amount = itemAmount;
         }
-        
+
         UpdateHUD();
     }
-    
+
     [Button]
-    public void AddItem (Item item, int amount = 1)
+    public void CleanSlot()
+    {
+        slot.item = null;
+        slot.amount = 0;
+        slot.index = 0;
+    }
+
+    [Button]
+    public void AddItem (IngredientAsset item, int amount = 1)
     {
         slot.AddItem(item, amount);
 
         UpdateHUD();
     }
-    
-    public Slot ChangeSlots (Slot otherSlot)
+
+    public void ChangeSlots (SlotAccessor otherSlot)
     {
-        var resultSlot = slot.ChangeSlots(otherSlot);
-        
+        if (this == otherSlot)
+            return;
+
+        var resultSlot = otherSlot.slot.ChangeSlots(slot);
+        slot.ChangeSlots(resultSlot);
+
         UpdateHUD();
-        return resultSlot;
+        otherSlot.UpdateHUD();
     }
 
+    [Button]
     private void UpdateHUD()
     {
         backgroundImage.sprite = slot.item?.Icon;
-        amountLabel.text = slot.item 
-            ? slot.amount.ToString() : "";
+        amountLabel.text = slot.item
+            ? slot.amount.ToString()
+            : "";
         amountLabelBackground.enabled = slot.item;
+    }
+
+    public void UpdateSlotAlpha (float newAlpha)
+    {
+        backgroundImage.SetAlpha(newAlpha);
+        amountLabelBackground.SetAlpha(newAlpha);
+        amountLabel.SetAlpha(newAlpha);
     }
 }
