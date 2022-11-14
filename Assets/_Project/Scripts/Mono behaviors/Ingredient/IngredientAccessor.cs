@@ -1,7 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class Ingredient : MonoBehaviour
+public class IngredientAccessor : MonoBehaviour
 {
     [Title("Settings")]
     [SerializeField]

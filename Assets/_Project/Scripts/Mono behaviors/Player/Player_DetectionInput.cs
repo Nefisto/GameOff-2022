@@ -16,9 +16,8 @@ public partial class Player
         var foundIngredients = new List<Collider2D>();
         Physics2D.OverlapCircle(transform.position, collectRadius, collectFilter, foundIngredients);
 
-        Debug.Log($"Found amount {foundIngredients.Count}");
         foundIngredients
-            .Select(col => col.GetComponent<Ingredient>())
+            .Select(col => col.GetComponent<IngredientAccessor>())
             .ForEach(i => Debug.Log($"{i.Name}"));
     }
 }
