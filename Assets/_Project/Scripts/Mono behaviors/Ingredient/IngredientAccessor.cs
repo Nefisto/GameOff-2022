@@ -5,7 +5,10 @@ public class IngredientAccessor : MonoBehaviour
 {
     [Title("Settings")]
     [SerializeField]
-    private IngredientAsset ingredient;
+    public IngredientAsset ingredient;
 
     public string Name => ingredient != null ? ingredient.name : "empty";
+
+    public void CollectIngredient()
+        => Destroy(gameObject);
 }

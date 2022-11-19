@@ -15,8 +15,13 @@ public partial class Player : MonoBehaviour
     [InfoBox("Yellow circle used to represent this value")]
     [SerializeField]
     private float collectRadius = 2f;
-
-    public ContactFilter2D collectFilter;
+    
+    [SerializeField]
+    private ContactFilter2D collectFilter;
+    
+    [Title("References")]
+    [SerializeField]
+    private Inventory inventory;
     
     [Title("Debug")]
     [ReadOnly]
