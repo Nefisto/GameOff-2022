@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ingredient
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ingredients
+    uniqueID: 216615309
+    locked: 0
+  - name: UI
+    uniqueID: 345956357
     locked: 0
