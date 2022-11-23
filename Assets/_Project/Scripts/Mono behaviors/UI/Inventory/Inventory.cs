@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using NTools;
 using Sirenix.OdinInspector;
@@ -24,7 +25,7 @@ public partial class Inventory : LazyMonoBehaviour
     [DisableInEditorMode]
     [ReadOnly]
     [SerializeField]
-    private SlotAccessor[] items;
+    public SlotAccessor[] items;
     
     private void Awake()
     {
@@ -84,6 +85,14 @@ public partial class Inventory : LazyMonoBehaviour
 
         return hasStacked || TryToAddItemInAnEmptySlot(item);
     }
+
+    public void UpdateHUD()
+    {
+        foreach (var slotAccessor in items)
+        {
+            slotAccessor.UpdateHUD();
+        }
+    }
     
     private bool TryToStackItem (Item item)
     {
@@ -131,6 +140,9 @@ public partial class Inventory : LazyMonoBehaviour
     private void Clear()
     {
         foreach (var slotAccessor in items)
+        {
             slotAccessor.Clear();
+            slotAccessor.UpdateHUD();
+        }
     }
 }

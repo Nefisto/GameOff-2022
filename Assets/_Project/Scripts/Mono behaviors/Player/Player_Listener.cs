@@ -9,8 +9,14 @@ public partial class Player
     }
 
     private void OnCloseCraftMenu()
-        => GameInputAccessor.Gameplay.Enable();
+    {
+        GameInputAccessor.Gameplay.Movement.Enable();
+        GameInputAccessor.Gameplay.Collect.Enable();
+    }
 
     private void OnOpenCraftMenu()
-        => GameInputAccessor.Gameplay.Disable();
+    {
+        GameInputAccessor.Gameplay.Movement.Disable();
+        GameInputAccessor.Gameplay.Collect.Disable();
+    }
 }

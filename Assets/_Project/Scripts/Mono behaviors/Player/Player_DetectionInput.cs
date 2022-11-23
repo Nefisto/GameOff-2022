@@ -26,6 +26,10 @@ public partial class Player
             .GetComponent<IngredientAccessor>();
         
         if (inventory.TryAddItem(nearestIngredient.ingredient))
+        {
             nearestIngredient.CollectIngredient();
+            
+            inventory.UpdateHUD();
+        }
     }
 }

@@ -25,6 +25,8 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
 
     [SerializeField]
     private Image amountLabelBackground;
+
+    public Item Item => slot.item;
     
     public bool IsInteractable => clickableAreaTarget.raycastTarget;
 
@@ -49,8 +51,6 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
         slot.item = null;
         slot.amount = 0;
         slot.index = 0;
-        
-        UpdateHUD();
     }
 
     [Button]
@@ -58,11 +58,7 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
         => AddItem((Item)item, amount);
 
     public void AddItem (Item item, int amount = 1)
-    {
-        slot.AddItem(item, amount);
-
-        UpdateHUD();
-    }
+        => slot.AddItem(item, amount);
 
     public void ChangeSlots (SlotAccessor otherSlot)
     {
@@ -77,7 +73,7 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
     }
 
     [Button]
-    private void UpdateHUD()
+    public void UpdateHUD()
     {
         backgroundImage.sprite = slot?.item?.Icon;
         amountLabel.text = slot?.item
@@ -104,4 +100,7 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
         
         return slot.Equals(other);
     }
+
+    public bool IsIngredient()
+        => slot.item != null && slot.item is IngredientAsset;
 }
