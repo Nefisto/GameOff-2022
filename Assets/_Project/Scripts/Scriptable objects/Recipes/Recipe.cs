@@ -1,19 +1,29 @@
-﻿using Sirenix.OdinInspector;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "Game off/Recipe", order = 0)]
-public class Recipe : ScriptableObject
+public class Recipe : ScriptableObject, IEnumerable<IngredientAsset>
 {
     [Title("Ingredients")]
-    [SerializeField]
-    private IngredientAsset ingredientA;
+    public IngredientAsset ingredientA;
+    public IngredientAsset ingredientB;
+    public IngredientAsset ingredientC;
+    
+    public PotionAsset result;
 
-    [SerializeField]
-    private IngredientAsset ingredientB;
+    public bool Contains (IngredientAsset ingredientAsset)
+        => this.Any(asset => asset.Equals(ingredientAsset));
 
-    [SerializeField]
-    private IngredientAsset ingredientC;
+    public IEnumerator<IngredientAsset> GetEnumerator()
+    {
+        yield return ingredientA;
+        yield return ingredientB;
+        yield return ingredientC;
+    }
 
-    [SerializeField]
-    private PotionAsset result;
+    IEnumerator IEnumerable.GetEnumerator()
+        => GetEnumerator();
 }
