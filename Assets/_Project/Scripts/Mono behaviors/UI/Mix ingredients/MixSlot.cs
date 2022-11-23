@@ -8,7 +8,7 @@ public class MixSlot : MonoBehaviour
     [SerializeField]
     private Image backgroundImage;
 
-    private SlotAccessor owner;
+    public SlotAccessor owner;
 
     public string Name => owner != null ? owner.Item.name : "Empty";
     public bool IsEmpty => owner == null;
