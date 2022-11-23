@@ -7,7 +7,8 @@ public partial class MouseController : MonoBehaviour
 {
     [Title("References")]
     public GraphicRaycaster raycaster;
-
+    public RectTransform dragItemFolder;
+    
     private void Start()
     {
         pointerEventData = new PointerEventData(EventSystem.current);

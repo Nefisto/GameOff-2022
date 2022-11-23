@@ -66,7 +66,7 @@ public partial class MouseController
 
         lastClickedSlot = tempSlotAccessor;
         
-        draggableSlot = Instantiate(lastClickedSlot, transform, true);
+        draggableSlot = Instantiate(lastClickedSlot, dragItemFolder, true);
         draggableSlot.UpdateSlotAlpha(.2f);
         draggableSlot.GetComponent<Image>().raycastTarget = false;
 
