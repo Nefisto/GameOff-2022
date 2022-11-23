@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using NTools;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.UI;
+using EventHandler = NTools.EventHandler;
 
 public partial class Inventory : LazyMonoBehaviour
 {
     [Title("References")]
     [SerializeField]
     private Transform slotFolder;
+
+    [SerializeField]
+    private Button collapseButton;
     
     [Title("Debug")]
     [ReadOnly]
@@ -19,7 +25,7 @@ public partial class Inventory : LazyMonoBehaviour
     [DisableInEditorMode]
     [ReadOnly]
     [SerializeField]
-    private SlotAccessor[] items;
+    public SlotAccessor[] items;
     
     private void Awake()
     {
@@ -36,16 +42,41 @@ public partial class Inventory : LazyMonoBehaviour
             slot.Setup(this, i);
             items[i] = slot;
         }
-    }
+    }   
 
     private IEnumerator Start()
     {
         SetupCollapseValues();
+        SetupListeners();
 
         yield return new WaitForSeconds(1f);
         
         UncollapseInventory();
     }
+
+    private void SetupListeners()
+    {
+        EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, OpenCraftHudCallback);
+        EventHandler.RegisterEvent(GameEventsNames.CLOSE_CRAFT_HUD, CloseCraftHudCallback);
+    }
+
+    private void CloseCraftHudCallback()
+    {
+        UncollapseInventory();
+        EnableCollapseButton();
+    }
+
+    private void OpenCraftHudCallback()
+    {
+        CollapseInventory();
+        DisableCollapseButton();
+    }
+
+    private void EnableCollapseButton()
+        => collapseButton.interactable = true;
+
+    private void DisableCollapseButton()
+        => collapseButton.interactable = false;
 
     [Button]
     public bool TryAddItem(Item item)
@@ -53,6 +84,14 @@ public partial class Inventory : LazyMonoBehaviour
         var hasStacked = TryToStackItem(item);
 
         return hasStacked || TryToAddItemInAnEmptySlot(item);
+    }
+
+    public void UpdateHUD()
+    {
+        foreach (var slotAccessor in items)
+        {
+            slotAccessor.UpdateHUD();
+        }
     }
     
     private bool TryToStackItem (Item item)
@@ -101,6 +140,9 @@ public partial class Inventory : LazyMonoBehaviour
     private void Clear()
     {
         foreach (var slotAccessor in items)
+        {
             slotAccessor.Clear();
+            slotAccessor.UpdateHUD();
+        }
     }
 }
