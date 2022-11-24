@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 350
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bramble walk_0
+      name: Right_0
       rect:
         serializedVersion: 2
         x: 116
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_1
+      name: Down_0
       rect:
         serializedVersion: 2
         x: 470
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_3
+      name: Left_0
       rect:
         serializedVersion: 2
         x: 901
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_4
+      name: Up_0
       rect:
         serializedVersion: 2
         x: 1243
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_5
+      name: Right_1
       rect:
         serializedVersion: 2
         x: 83
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_6
+      name: Down_1
       rect:
         serializedVersion: 2
         x: 605
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_9
+      name: Left_1
       rect:
         serializedVersion: 2
         x: 1103
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_10
+      name: Up_1
       rect:
         serializedVersion: 2
         x: 1545
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_13
+      name: Right_2
       rect:
         serializedVersion: 2
         x: 78
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_14
+      name: Down_2
       rect:
         serializedVersion: 2
         x: 590
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_15
+      name: Left_2
       rect:
         serializedVersion: 2
         x: 1059
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_16
+      name: Up_2
       rect:
         serializedVersion: 2
         x: 1543
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_17
+      name: Right_3
       rect:
         serializedVersion: 2
         x: 107
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_18
+      name: Down_3
       rect:
         serializedVersion: 2
         x: 570
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_19
+      name: Left_3
       rect:
         serializedVersion: 2
         x: 1088
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_20
+      name: Up_3
       rect:
         serializedVersion: 2
         x: 1553
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_22
+      name: Down_4
       rect:
         serializedVersion: 2
         x: 584
@@ -474,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_24
+      name: Right_4
       rect:
         serializedVersion: 2
         x: 94
@@ -495,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_25
+      name: Left_4
       rect:
         serializedVersion: 2
         x: 1091
@@ -516,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_26
+      name: Up_4
       rect:
         serializedVersion: 2
         x: 1512
@@ -537,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_27
+      name: Right_5
       rect:
         serializedVersion: 2
         x: 98
@@ -558,7 +558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_28
+      name: Down_5
       rect:
         serializedVersion: 2
         x: 573
@@ -579,7 +579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_29
+      name: Left_5
       rect:
         serializedVersion: 2
         x: 1053
@@ -600,7 +600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_30
+      name: Up_5
       rect:
         serializedVersion: 2
         x: 1507
@@ -621,7 +621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_31
+      name: Right_6
       rect:
         serializedVersion: 2
         x: 133
@@ -642,7 +642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_32
+      name: Down_6
       rect:
         serializedVersion: 2
         x: 584
@@ -663,7 +663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_33
+      name: Left_6
       rect:
         serializedVersion: 2
         x: 1070
@@ -684,7 +684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bramble walk_34
+      name: Up_6
       rect:
         serializedVersion: 2
         x: 1477
@@ -715,41 +715,41 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bramble walk_16: -1333272572
-      Bramble walk_30: 464573381
-      Bramble walk_13: 2025269901
-      Bramble walk_15: -434503417
-      Bramble walk_24: 180683294
-      Bramble walk_0: -1901507032
-      Bramble walk_33: -765962868
+      Down_2: -1922975395
+      Right_2: 2025269901
+      Left_3: -1157654836
+      Down_5: 495025682
+      Down_4: -1286368546
+      Down_6: -1780132247
+      Left_0: 839359151
+      Down_1: 1792266101
+      Up_4: 133938654
+      Right_5: -1989763740
       Bramble walk_21: -393691153
-      Bramble walk_5: 1025523920
+      Right_3: 164919362
+      Up_2: -1333272572
+      Down_0: -194083069
       Bramble walk_7: -1547562428
-      Bramble walk_3: 839359151
       Bramble walk_8: -355951924
+      Up_5: 464573381
       Bramble walk_11: -1186988025
-      Bramble walk_18: 1905652527
-      Bramble walk_34: -360053928
-      Bramble walk_32: -1780132247
-      Bramble walk_9: -790404054
-      Bramble walk_20: -1995404102
-      Bramble walk_22: -1286368546
+      Up_0: -1503464381
+      Right_4: 180683294
+      Down_3: 1905652527
+      Up_1: 1952845180
+      Left_4: 1168404988
+      Left_6: -765962868
       Bramble walk_12: 344124103
-      Bramble walk_29: 537121105
-      Bramble walk_10: 1952845180
-      Bramble walk_14: -1922975395
-      Bramble walk_27: -1989763740
-      Bramble walk_31: -353000569
-      Bramble walk_17: 164919362
-      Bramble walk_19: -1157654836
-      Bramble walk_28: 495025682
+      Up_3: -1995404102
+      Up_6: -360053928
+      Right_0: -1901507032
+      Left_1: -790404054
+      Left_5: 537121105
+      Right_1: 1025523920
       Bramble walk_2: -476618182
       Bramble walk_23: 1586086663
-      Bramble walk_25: 1168404988
-      Bramble walk_1: -194083069
-      Bramble walk_4: -1503464381
-      Bramble walk_6: 1792266101
-      Bramble walk_26: 133938654
+      Left_2: -434503417
+      Right_6: -353000569
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

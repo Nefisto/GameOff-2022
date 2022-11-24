@@ -1,10 +1,11 @@
-﻿using Sirenix.OdinInspector;
+﻿using NTools;
+using Sirenix.OdinInspector;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-public partial class Player : MonoBehaviour
+public partial class Player : LazyMonoBehaviour
 {
     [Title("Settings")]
     [SerializeField]
