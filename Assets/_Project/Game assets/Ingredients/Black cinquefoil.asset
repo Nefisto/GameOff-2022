@@ -25,3 +25,6 @@ MonoBehaviour:
     - Name: Icon
       Entry: 10
       Data: 0
+  possibleIcons:
+  - {fileID: -633693292, guid: bc5b22bfb90c505448d530289ad0865d, type: 3}
+  - {fileID: -117912557, guid: bc5b22bfb90c505448d530289ad0865d, type: 3}
