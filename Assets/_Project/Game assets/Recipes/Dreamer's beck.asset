@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0185cebeb17c4b0293bdf367f0c1fb30, type: 3}
-  m_Name: Bright eyes potion
+  m_Name: Dreamer's beck
   m_EditorClassIdentifier: 
-  ingredientA: {fileID: 11400000, guid: c826cc3aee6b71943b3852a8308e71ce, type: 2}
-  ingredientB: {fileID: 11400000, guid: 5d819d78bda90ac478c8306a940645ac, type: 2}
-  ingredientC: {fileID: 11400000, guid: a43484ad01739484c92a87b81feac241, type: 2}
-  result: {fileID: 11400000, guid: d566ebdef4db2a84f94b457f76449e09, type: 2}
+  ingredientA: {fileID: 11400000, guid: 9f30d96950e08c84f982a7d2e864a35c, type: 2}
+  ingredientB: {fileID: 11400000, guid: c826cc3aee6b71943b3852a8308e71ce, type: 2}
+  ingredientC: {fileID: 11400000, guid: 5d819d78bda90ac478c8306a940645ac, type: 2}
+  result: {fileID: 11400000, guid: 1fbd405cdb195cc4a864feec12365adc, type: 2}

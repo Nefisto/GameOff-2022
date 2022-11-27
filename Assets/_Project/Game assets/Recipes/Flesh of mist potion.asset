@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Flesh of mist potion
   m_EditorClassIdentifier: 
   ingredientA: {fileID: 11400000, guid: 9f30d96950e08c84f982a7d2e864a35c, type: 2}
-  ingredientB: {fileID: 11400000, guid: c826cc3aee6b71943b3852a8308e71ce, type: 2}
-  ingredientC: {fileID: 11400000, guid: 5d819d78bda90ac478c8306a940645ac, type: 2}
+  ingredientB: {fileID: 11400000, guid: b0102cf7286d56a4cb0102f75979eddb, type: 2}
+  ingredientC: {fileID: 11400000, guid: a43484ad01739484c92a87b81feac241, type: 2}
   result: {fileID: 11400000, guid: 7b86d6c66c2b4244193d38680a6a5ac7, type: 2}
