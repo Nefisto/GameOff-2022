@@ -30,6 +30,7 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
     
     public bool IsInteractable => clickableAreaTarget.raycastTarget;
 
+    public int ItemAmount => slot.amount;
     public bool IsEmpty => slot.item == null;
     
     public void Setup (Inventory owner, int index, Item initialItem = null, int itemAmount = 0)

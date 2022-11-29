@@ -67,18 +67,24 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
             return;
         }
 
+        // if (!inventory.CanAddThisPotion(validRecipe.result, slotA.owner, slotB.owner, slotC.owner))
+        // {
+        //     Debug.LogWarning("We dont have space for the potion");
+        //     return;
+        // }
+        
         foreach (var mixSlot in this)
         {
             if (!inventory.TryRemoveItem(mixSlot.owner.Item))
                 Debug.LogWarning($"Item {mixSlot.owner.Item} used to brew does not exist in inventory");
         }
         
+        ClearSlots();
+
+        inventory.TryAddItem(validRecipe.result);
+        
         inventory.UpdateHUD();
         inventoryViewInCraftHUD.UpdateHUD();
-
-        ClearSlots();
-        
-        Debug.Log($"Success: {validRecipe.result.name}");
     }
 
     private Recipe FindForValidRecipes()
