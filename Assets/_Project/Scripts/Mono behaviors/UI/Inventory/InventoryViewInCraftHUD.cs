@@ -3,7 +3,6 @@ using System.Linq;
 using NTools;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class InventoryViewInCraftHUD : MonoBehaviour
 {
@@ -35,6 +34,8 @@ public class InventoryViewInCraftHUD : MonoBehaviour
     [DisableInEditorMode]
     private List<SlotAndMixSlot> itemsView = new();
     
+    public SlotAccessor slotAccessor;
+
     private void Start()
     {
         EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, OnOpenCraftHud);

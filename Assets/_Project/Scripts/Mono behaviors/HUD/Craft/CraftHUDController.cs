@@ -9,7 +9,11 @@ public class CraftHUDController : MonoBehaviour
     private Transform craftFolder;
 
     private void Start()
-        => EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, OpenCraftHUDMenu);
+    {
+        EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, OpenCraftHUDMenu);
+
+        ((RectTransform)craftFolder).anchoredPosition = Vector2.zero;
+    }
 
     public void CloseCraftHUDMenu()
     {
