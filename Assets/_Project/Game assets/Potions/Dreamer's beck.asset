@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1d4e041bf3a471abe229a091cde0819, type: 3}
-  m_Name: Midsummer potion
+  m_Name: Dreamer's beck
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1388475351, guid: b144c624dfc4f5842b58847d8e6e1e85, type: 3}
+    - {fileID: 1526358384, guid: 6d96995189681c74787b8562f3bcb013, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []

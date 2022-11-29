@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1d4e041bf3a471abe229a091cde0819, type: 3}
-  m_Name: Midsummer potion
+  m_Name: Wayfarer's balm
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1388475351, guid: b144c624dfc4f5842b58847d8e6e1e85, type: 3}
+    - {fileID: 940327299, guid: ff557872ed78d904aaedddab935ec192, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
