@@ -86,6 +86,18 @@ public partial class Inventory : LazyMonoBehaviour
         return hasStacked || TryToAddItemInAnEmptySlot(item);
     }
 
+    public bool TryRemoveItem(Item item)
+    {
+        if (items.All(sa => sa.Item != item))
+            return false;
+
+        items
+            .First(sa => sa.Item == item)
+            .ReduceItem();
+
+        return true;
+    }
+    
     public void UpdateHUD()
     {
         foreach (var slotAccessor in items)
@@ -144,5 +156,22 @@ public partial class Inventory : LazyMonoBehaviour
             slotAccessor.Clear();
             slotAccessor.UpdateHUD();
         }
+    }
+
+    public bool CanAddThisPotion(PotionAsset potionToAdd, params SlotAccessor[] ingredientsThatWillBeRemoved)
+    {
+        return items.Any(sa => sa.Item == potionToAdd) 
+               || WillHaveAFreeSpaceAfterRemoveAnyOfThisIngredients(ingredientsThatWillBeRemoved);
+    }
+
+    private bool WillHaveAFreeSpaceAfterRemoveAnyOfThisIngredients (SlotAccessor[] ingredientsThatWillBeRemoved)
+    {
+        foreach (var ingredientAsset in ingredientsThatWillBeRemoved)
+        {
+            if (items.Any(sa => sa.Item == ingredientAsset.Item && sa.ItemAmount == 1))
+                return true;
+        }
+
+        return false;
     }
 }

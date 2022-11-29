@@ -13,6 +13,12 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
 
     [Title("References")]
     [SerializeField]
+    private Inventory inventory;
+
+    [SerializeField]
+    private InventoryViewInCraftHUD inventoryViewInCraftHUD;
+    
+    [SerializeField]
     private MixSlot slotA;
 
     [SerializeField]
@@ -60,16 +66,25 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
 
             return;
         }
+
+        // if (!inventory.CanAddThisPotion(validRecipe.result, slotA.owner, slotB.owner, slotC.owner))
+        // {
+        //     Debug.LogWarning("We dont have space for the potion");
+        //     return;
+        // }
         
         foreach (var mixSlot in this)
         {
-            mixSlot.owner.ReduceItem();
-            mixSlot.owner.UpdateHUD();
+            if (!inventory.TryRemoveItem(mixSlot.owner.Item))
+                Debug.LogWarning($"Item {mixSlot.owner.Item} used to brew does not exist in inventory");
         }
         
         ClearSlots();
+
+        inventory.TryAddItem(validRecipe.result);
         
-        Debug.Log($"Success: {validRecipe.result.name}");
+        inventory.UpdateHUD();
+        inventoryViewInCraftHUD.UpdateHUD();
     }
 
     private Recipe FindForValidRecipes()

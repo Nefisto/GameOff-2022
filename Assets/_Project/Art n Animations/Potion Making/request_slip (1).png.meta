@@ -113,19 +113,31 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: request_slip (1)_0
+      name: Dreamers beck
       rect:
         serializedVersion: 2
         x: 88
-        y: 1084
+        y: 1082
         width: 218
         height: 398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,7 +150,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: request_slip (1)_1
+      name: Bright eyes
       rect:
         serializedVersion: 2
         x: 738
@@ -146,7 +158,7 @@ TextureImporter:
         width: 256
         height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,7 +171,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: request_slip (1)_2
+      name: Snoopers ear
       rect:
         serializedVersion: 2
         x: 1411
@@ -167,7 +179,7 @@ TextureImporter:
         width: 254
         height: 407
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,7 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: request_slip (1)_3
+      name: Beautys glaze
       rect:
         serializedVersion: 2
         x: 301
@@ -188,7 +200,7 @@ TextureImporter:
         width: 353
         height: 814
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,28 +213,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: request_slip (1)_4
-      rect:
-        serializedVersion: 2
-        x: 821
-        y: 233
-        width: 335
-        height: 653
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88b2a3bfa7f3f474dbfa58d633201770
-      internalID: 756599384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: request_slip (1)_5
+      name: Prophesying potion
       rect:
         serializedVersion: 2
         x: 1378
@@ -230,7 +221,7 @@ TextureImporter:
         width: 436
         height: 631
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,12 +244,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      request_slip (1)_1: -155916249
-      request_slip (1)_3: -862389303
+      Dreamers beck: 1526358384
+      Beautys glaze: -862389303
       request_slip (1)_4: 756599384
-      request_slip (1)_0: 1526358384
-      request_slip (1)_5: -894366545
-      request_slip (1)_2: 1289286605
+      Prophesying potion: -894366545
+      Bright eyes: -155916249
+      Snoopers ear: 1289286605
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
