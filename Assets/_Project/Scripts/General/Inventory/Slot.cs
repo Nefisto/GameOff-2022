@@ -70,4 +70,12 @@ public class Slot
         
         return item.Equals(other);
     }
+
+    public void ReduceItem()
+    {
+        amount = Mathf.Clamp(amount - 1, 0, int.MaxValue);
+
+        if (amount == 0)
+            item = null;
+    }
 }

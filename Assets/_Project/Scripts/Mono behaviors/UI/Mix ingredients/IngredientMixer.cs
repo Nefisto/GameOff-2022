@@ -10,7 +10,7 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
     [Title("Settings")]
     [SerializeField]
     private List<Recipe> possibleRecipes;
-    
+
     [Title("References")]
     [SerializeField]
     private MixSlot slotA;
@@ -21,12 +21,34 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
     [SerializeField]
     private MixSlot slotC;
     
+    private void Start()
+        => EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, OnOpenCraftMenu);
+
+    public IEnumerator<MixSlot> GetEnumerator()
+    {
+        yield return slotA;
+        yield return slotB;
+        yield return slotC;
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+        => GetEnumerator();
+
+    private void OnOpenCraftMenu()
+        => ClearSlots();
+
+    private void ClearSlots()
+    {
+        foreach (var mixSlot in this)
+            mixSlot.RemoveItem();
+    }
+
     public void Brew()
     {
         if (!CheckIfSlotsAreaFilledCorrectly())
         {
             EventHandler.RaiseEvent(GameEventsNames.FAILED_TO_BREW);
-            
+
             return;
         }
 
@@ -38,8 +60,16 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
 
             return;
         }
-
-        Debug.Log($"Success");
+        
+        foreach (var mixSlot in this)
+        {
+            mixSlot.owner.ReduceItem();
+            mixSlot.owner.UpdateHUD();
+        }
+        
+        ClearSlots();
+        
+        Debug.Log($"Success: {validRecipe.result.name}");
     }
 
     private Recipe FindForValidRecipes()
@@ -57,13 +87,13 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
            && !slotB.IsEmpty
            && !slotC.IsEmpty;
 
-    public bool TryAddIngredient(SlotAccessor ingredient, out MixSlot slot)
+    public bool TryAddIngredient (SlotAccessor ingredient, out MixSlot slot)
     {
         foreach (var mixSlot in this)
         {
             if (!mixSlot.IsEmpty)
                 continue;
-            
+
             mixSlot.AddItem(ingredient);
             slot = mixSlot;
             return true;
@@ -72,14 +102,4 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
         slot = null;
         return false;
     }
-
-    public IEnumerator<MixSlot> GetEnumerator()
-    {
-        yield return slotA;
-        yield return slotB;
-        yield return slotC;
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-        => GetEnumerator();
 }
