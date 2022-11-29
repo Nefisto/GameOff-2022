@@ -105,7 +105,5 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
         => slot.item != null && slot.item is IngredientAsset;
 
     public void ReduceItem()
-    {
-        slot.ReduceItem();
-    }
+        => slot.ReduceItem();
 }

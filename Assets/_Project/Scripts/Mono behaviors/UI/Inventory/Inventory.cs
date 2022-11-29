@@ -86,6 +86,18 @@ public partial class Inventory : LazyMonoBehaviour
         return hasStacked || TryToAddItemInAnEmptySlot(item);
     }
 
+    public bool TryRemoveItem(Item item)
+    {
+        if (items.All(sa => sa.Item != item))
+            return false;
+
+        items
+            .First(sa => sa.Item == item)
+            .ReduceItem();
+
+        return true;
+    }
+    
     public void UpdateHUD()
     {
         foreach (var slotAccessor in items)

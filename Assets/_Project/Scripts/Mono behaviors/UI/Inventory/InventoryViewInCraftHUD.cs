@@ -37,9 +37,7 @@ public class InventoryViewInCraftHUD : MonoBehaviour
     public SlotAccessor slotAccessor;
 
     private void Start()
-    {
-        EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, OnOpenCraftHud);
-    }
+        => EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, UpdateHUD);
 
     public void ToggleIngredientOnMixSlots (SlotAccessor slot)
     {
@@ -60,7 +58,7 @@ public class InventoryViewInCraftHUD : MonoBehaviour
         }
     }
     
-    private void OnOpenCraftHud()
+    public void UpdateHUD()
     {
         DestroyChildren();
         ReplicateItemsFromInventory();

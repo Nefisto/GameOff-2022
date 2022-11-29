@@ -2941,7 +2941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.74700004}
   m_AnchorMax: {x: 0, y: 0.74700004}
-  m_AnchoredPosition: {x: 113.00012, y: -56.339966}
+  m_AnchoredPosition: {x: 113.00018, y: -56.339966}
   m_SizeDelta: {x: 111.880066, y: 112.2}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &545255490
@@ -5697,6 +5697,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce3b0e8ed68ab3347b4a99837568c369, type: 2}
   - {fileID: 11400000, guid: 81b0efb260e49d54784efe60cad6a995, type: 2}
   - {fileID: 11400000, guid: 9ce56b6ce5122dc4bb2ffdb041f74d29, type: 2}
+  inventory: {fileID: 1755338757}
+  inventoryViewInCraftHUD: {fileID: 2008402087}
   slotA: {fileID: 1752541486}
   slotB: {fileID: 1587898436}
   slotC: {fileID: 1355312173}
@@ -10152,7 +10154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.74700004}
   m_AnchorMax: {x: 0, y: 0.74700004}
-  m_AnchoredPosition: {x: -163.99994, y: -321}
+  m_AnchoredPosition: {x: -163.99991, y: -321}
   m_SizeDelta: {x: 326.62, y: 642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1755338756
@@ -11057,7 +11059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inventory: {fileID: 1755338757}
-  ingredientA: {fileID: 11400000, guid: 5d819d78bda90ac478c8306a940645ac, type: 2}
+  ingredientA: {fileID: 11400000, guid: c826cc3aee6b71943b3852a8308e71ce, type: 2}
   ingredientB: {fileID: 11400000, guid: c826cc3aee6b71943b3852a8308e71ce, type: 2}
   ingredientC: {fileID: 11400000, guid: 9f30d96950e08c84f982a7d2e864a35c, type: 2}
   ingredientD: {fileID: 11400000, guid: a43484ad01739484c92a87b81feac241, type: 2}
