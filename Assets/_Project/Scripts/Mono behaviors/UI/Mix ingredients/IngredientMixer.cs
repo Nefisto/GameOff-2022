@@ -85,6 +85,8 @@ public class IngredientMixer : MonoBehaviour, IEnumerable<MixSlot>
         
         inventory.UpdateHUD();
         inventoryViewInCraftHUD.UpdateHUD();
+        
+        EventHandler.RaiseEvent(GameEventsNames.SUCCESSFULLY_BREW, validRecipe.result.name);
     }
 
     private Recipe FindForValidRecipes()

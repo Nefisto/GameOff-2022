@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Craft door
   layers:
   - Default
   - TransparentFX
@@ -41,11 +42,17 @@ TagManager:
   - name: Ground
     uniqueID: 1313468123
     locked: 0
+  - name: Environment
+    uniqueID: 1957304947
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Ingredients
     uniqueID: 216615309
+    locked: 0
+  - name: Player
+    uniqueID: 4043191733
     locked: 0
   - name: UI
     uniqueID: 345956357

@@ -13,10 +13,11 @@ public partial class Player
 
     private void OnPerformCollect (InputAction.CallbackContext _)
     {
-        var foundIngredients = new List<Collider2D>();
-        Physics2D.OverlapCircle(transform.position, collectRadius, collectFilter, foundIngredients);
+        // var foundIngredients = new List<Collider2D>();
+        var foundIngredients = Physics2D.OverlapCircleAll(transform.position, collectRadius, LayerMask.GetMask("Ingredient"));//collectFilter, foundIngredients);
 
-        if (foundIngredients.Count == 0)
+        // if (foundIngredients.Count == 0)
+        if (foundIngredients.Length == 0)
             return;
 
         var playerPosition = transform.position;
