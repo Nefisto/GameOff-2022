@@ -10,8 +10,10 @@ public partial class Player
 
     public void Move (Vector2 direction)
     {
-        transform.Translate(direction * speed * Time.deltaTime);
-
+        // transform.Translate(direction * speed * Time.deltaTime);
+        var moveDirection = direction * (speed * Time.deltaTime);
+        rigidbody2D.MovePosition((Vector2)transform.position + moveDirection);
+        
         SetAnimatorMovement(direction);
         animator.Play("Player walk");
     }

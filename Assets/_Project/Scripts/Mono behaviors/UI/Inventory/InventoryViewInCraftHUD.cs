@@ -2,6 +2,7 @@
 using System.Linq;
 using NTools;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 
 public class InventoryViewInCraftHUD : MonoBehaviour
@@ -29,6 +30,9 @@ public class InventoryViewInCraftHUD : MonoBehaviour
     private SlotAccessor slotAccessorPrefab;
 
     [SerializeField]
+    private TMP_Text resultLabel;
+
+    [SerializeField]
     private IngredientMixer mixer;
     
     [DisableInEditorMode]
@@ -37,7 +41,20 @@ public class InventoryViewInCraftHUD : MonoBehaviour
     public SlotAccessor slotAccessor;
 
     private void Start()
-        => EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, UpdateHUD);
+    {
+        EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, UpdateHUD);
+        EventHandler.RegisterEvent(GameEventsNames.OPEN_CRAFT_HUD, ResetResultLabel);
+        
+        EventHandler.RegisterEvent(GameEventsNames.FAILED_TO_BREW, OnFailBrew);
+        
+        EventHandler.RegisterEvent<string>(GameEventsNames.SUCCESSFULLY_BREW, OnSuccessBrew);
+    }
+
+    private void OnSuccessBrew(string potionName)
+        => resultLabel.text = $"Successfully brew {potionName}";
+
+    private void OnFailBrew()
+        => resultLabel.text = "You do not have a recipe with this combination, try another one";
 
     public void ToggleIngredientOnMixSlots (SlotAccessor slot)
     {
@@ -63,6 +80,9 @@ public class InventoryViewInCraftHUD : MonoBehaviour
         DestroyChildren();
         ReplicateItemsFromInventory();
     }
+
+    private void ResetResultLabel()
+        => resultLabel.text = "-";
 
     private void ReplicateItemsFromInventory()
     {
