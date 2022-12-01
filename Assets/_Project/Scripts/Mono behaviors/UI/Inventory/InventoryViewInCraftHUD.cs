@@ -48,6 +48,8 @@ public class InventoryViewInCraftHUD : MonoBehaviour
         EventHandler.RegisterEvent(GameEventsNames.FAILED_TO_BREW, OnFailBrew);
         
         EventHandler.RegisterEvent<string>(GameEventsNames.SUCCESSFULLY_BREW, OnSuccessBrew);
+        
+        gameObject.SetActive(false);
     }
 
     private void OnSuccessBrew(string potionName)
