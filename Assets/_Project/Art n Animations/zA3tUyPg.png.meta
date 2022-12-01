@@ -137,7 +137,7 @@ TextureImporter:
         width: 274
         height: 281
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,6 +145,90 @@ TextureImporter:
       bones: []
       spriteID: e1d7f7dc678df184aa8957dfb9e5945a
       internalID: -2046058679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_2
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 104
+        width: 394
+        height: 1810
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c230c1776801ad24cb9c0321ab52f46a
+      internalID: -1083246388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 349
+        height: 1941
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d79fc430827c7145872fb3850f27f97
+      internalID: -1684986244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_5
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 68
+        width: 394
+        height: 1940
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4709b47687626564d9bf87a262232a47
+      internalID: -1885080037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back_4
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 66
+        width: 259
+        height: 1911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66187984831c7214e81318ad28363c40
+      internalID: -122817582
       vertices: []
       indices: 
       edges: []
@@ -160,6 +244,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      back_4: -122817582
+      Back_2: -1083246388
+      back_5: -1885080037
+      Back_3: -1684986244
       back_1: -2046058679
   spritePackingTag: 
   pSDRemoveMatte: 0

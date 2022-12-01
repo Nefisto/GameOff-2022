@@ -10,9 +10,16 @@ public partial class MouseController : MonoBehaviour
     public GraphicRaycaster raycaster;
     public RectTransform dragItemFolder;
     public Canvas dragCanvas;
+
+    [Title("Cursor")]
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
     
     private void Start()
     {
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        
         SetupMachineState();
         
         pointerEventData = new PointerEventData(EventSystem.current);

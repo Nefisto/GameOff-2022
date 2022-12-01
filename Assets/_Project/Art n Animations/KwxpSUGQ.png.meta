@@ -137,7 +137,7 @@ TextureImporter:
         width: 147
         height: 162
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,6 +145,48 @@ TextureImporter:
       bones: []
       spriteID: 8b331a0ea2e2a494fa9174e952b2fd60
       internalID: -2145496956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse_img
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1925
+        width: 111
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504e0929b935fa24b8d89ad2447b4dad
+      internalID: 1210448769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Open inv
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1761
+        width: 121
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace9936e7bb6d844a8126035286658ed
+      internalID: 1580573245
       vertices: []
       indices: 
       edges: []
@@ -160,6 +202,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Open inv: 1580573245
+      mouse_img: 1210448769
       block: -2145496956
   spritePackingTag: 
   pSDRemoveMatte: 0

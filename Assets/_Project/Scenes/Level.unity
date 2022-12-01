@@ -4100,6 +4100,9 @@ MonoBehaviour:
   raycaster: {fileID: 1533270963}
   dragItemFolder: {fileID: 2016477160}
   dragCanvas: {fileID: 1533270965}
+  cursorTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
   inventoryViewInCraftHUD: {fileID: 2008402087}
   lastClickedSlot: {fileID: 0}
 --- !u!4 &65818785
@@ -10276,6 +10279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158724259}
   - component: {fileID: 158724258}
+  - component: {fileID: 158724260}
   m_Layer: 0
   m_Name: 2D CM Camera
   m_TagString: Untagged
@@ -10337,6 +10341,23 @@ Transform:
   m_Father: {fileID: 1709401244}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158724260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 410135566}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!1 &165953788
 GameObject:
   m_ObjectHideFlags: 0
@@ -24614,6 +24635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 410135565}
+  - component: {fileID: 410135566}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -25592,6 +25614,36 @@ Transform:
   m_Father: {fileID: 455026551}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &410135566
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410135564}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 17.568277, y: 11.486264}
+      - {x: -16.463795, y: 11.575251}
+      - {x: -16.526001, y: -14.5248}
+      - {x: 17.419836, y: -14.578799}
+      - {x: 17.489338, y: 11.477921}
 --- !u!1 &410478739
 GameObject:
   m_ObjectHideFlags: 0
@@ -34072,7 +34124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 96e902e36d266234eb47950b71a7a243, type: 3}
+  m_Sprite: {fileID: 1580573245, guid: 79ffd8509b2766447b8e6b679a84a367, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
