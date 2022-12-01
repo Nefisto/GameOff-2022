@@ -9,6 +9,7 @@ public partial class MouseController : MonoBehaviour
     [Title("References")]
     public GraphicRaycaster raycaster;
     public RectTransform dragItemFolder;
+    public Canvas dragCanvas;
     
     private void Start()
     {

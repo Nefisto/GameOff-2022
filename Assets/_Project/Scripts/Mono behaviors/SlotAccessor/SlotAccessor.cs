@@ -76,10 +76,17 @@ public partial class SlotAccessor : MonoBehaviour//, IEquatable<Item>
     [Button]
     public void UpdateHUD()
     {
-        backgroundImage.sprite = slot?.item?.Icon;
+        if (slot?.item?.Icon != null)
+        {
+            backgroundImage.enabled = true;
+            backgroundImage.sprite = slot.item.Icon;
+        }
+        else
+            backgroundImage.enabled = false;
+
         amountLabel.text = slot?.item
-            ? slot.amount.ToString() : "--";
-        amountLabelBackground.enabled = slot?.item;
+            ? slot.amount.ToString() : "";
+        // amountLabelBackground.enabled = slot?.item;
         disabledOverlapImage.enabled = !IsInteractable;
     }
 
