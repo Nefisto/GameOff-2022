@@ -31,6 +31,8 @@ public partial class Player
             nearestIngredient.CollectIngredient();
             
             inventory.UpdateHUD();
+            
+            EventHandler.RaiseEvent(GameEventsNames.SUCCESSFULLY_COLLECT_FLOWER);
         }
     }
 }
