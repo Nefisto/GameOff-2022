@@ -27,6 +27,13 @@ public class MixSlot : MonoBehaviour
     
     private void UpdateHUD(Sprite icon)
     {
+        if (icon == null)
+        {
+            backgroundImage.enabled = false;
+            return;
+        }
+
+        backgroundImage.enabled = true;
         backgroundImage.sprite = icon;
     }
 }

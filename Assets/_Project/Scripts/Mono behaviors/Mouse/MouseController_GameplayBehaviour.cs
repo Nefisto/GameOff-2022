@@ -43,9 +43,8 @@ public partial class MouseController
         lastClickedSlot = foundClickable;
         
         draggableSlot = Instantiate(lastClickedSlot, dragItemFolder, true);
-        // ((RectTransform)draggableSlot.transform).anchorMin = new Vector2(0, 1);
-        // ((RectTransform)draggableSlot.transform).anchorMax = new Vector2(0, 1);
-        draggableSlot.UpdateSlotAlpha(.2f);
+        ((RectTransform)draggableSlot.transform).anchoredPosition = Input.mousePosition / dragCanvas.scaleFactor;
+        draggableSlot.UpdateSlotAlpha(.75f);
         draggableSlot.GetComponent<Image>().raycastTarget = false;
 
         dragRoutine?.Stop();
@@ -96,7 +95,7 @@ public partial class MouseController
             if (draggableSlot == null)
                 yield break;
             
-            ((RectTransform)draggableSlot.transform).anchoredPosition = Input.mousePosition;
+            ((RectTransform)draggableSlot.transform).anchoredPosition = Input.mousePosition / dragCanvas.scaleFactor;
             
             yield return new WaitForSeconds(.01f);
         }
